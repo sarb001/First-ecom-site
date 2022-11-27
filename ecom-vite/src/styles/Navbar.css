@@ -1,6 +1,4 @@
-.n-container {
-    padding: 3%;
-}
+
 .n-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
