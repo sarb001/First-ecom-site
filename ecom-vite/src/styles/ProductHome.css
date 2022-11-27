@@ -1,0 +1,18 @@
+.hp-card{
+    width: 50%;
+    height: 50vh;
+    padding-top: 6%;
+    background-color: burlywood;
+}
+
+.product-img{
+width: 80%;
+}
+.card-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    cursor: pointer;
+}
+#btn {
+    width: 60%;
+}

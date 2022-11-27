@@ -1,0 +1,12 @@
+.c-container {
+    padding-top: 4%;
+    width: 100%;
+
+}
+.c-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.category-img{
+    width: 50%;
+}
