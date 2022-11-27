@@ -2,6 +2,8 @@ import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faShoppingBag ,faHeart , faArrowRightToBracket} from '@fortawesome/free-solid-svg-icons'
 
+import {NavLink} from 'react-router-dom';
+
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -28,9 +30,9 @@ const Navbar = () => {
             
             <div className="n-col">
                 <div className="icons">
-                   <a href = "/">  <span>  <FontAwesomeIcon icon= {faArrowRightToBracket} /> Login  </span> </a>  
-                   <a href = "/">  <span>   <FontAwesomeIcon icon= {faHeart} /> <span className='totalItems'> 0  </span>  </span> </a>
-                   <a href = "/">  <span>  <FontAwesomeIcon icon= {faShoppingBag} /> <span className='totalItems'> 0</span> </span> </a> 
+                   <a href = "/login">  <span>  <FontAwesomeIcon icon= {faArrowRightToBracket} /> Login  </span> </a>  
+                   <a href = "/wish">  <span>   <FontAwesomeIcon icon= {faHeart} /> <span className='totalItems'> 0  </span>  </span> </a>
+                   <a href = "/cart">  <span>  <FontAwesomeIcon icon= {faShoppingBag} /> <span className='totalItems'> 0</span> </span> </a> 
                 </div>
              </div>
         </div>
@@ -38,10 +40,10 @@ const Navbar = () => {
          <div className="n-row">
             <div className="nav">
                 <ul className="items">
-                     <li className='list'> Home  </li>
-                     <li className='list'> Shop </li>
-                     <li className='list'> About  </li>
-                     <li className='list'> Contact </li>
+                     <li className='list'> <NavLink to = "/"         activeClassName = "active">  Home </NavLink>   </li>
+                     <li className='list'> <NavLink to = "/shop"     activeClassName = "active"> Shop </NavLink>    </li>
+                     <li className='list'> <NavLink to = "/about"    activeClassName = "active"> About  </NavLink>   </li>
+                     <li className='list'> <NavLink to = "/contact"  activeClassName = "active"> Contact </NavLink> </li>
                 </ul>
             </div>
          </div>

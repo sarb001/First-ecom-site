@@ -28,5 +28,7 @@ ul > li {
 .list:hover {
     color: red;
     cursor: pointer;
-
+}
+.list a.active {
+  color: rgb(204, 0, 255);
 }
