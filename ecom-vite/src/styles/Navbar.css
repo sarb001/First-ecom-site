@@ -1,4 +1,32 @@
+.n-container {
+    padding: 3%;
+}
 .n-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.icons >a {
+    text-decoration: none;
+}
+.socials > a{
+    text-decoration: none;
+}
+.logo-img{
+    width: 50%;
+}
+ul > li {
+    list-style-type: none;
+}
+.list{
+    font-size: 22px;
+    font-weight: 400;
+}
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.list:hover {
+    color: red;
+    cursor: pointer;
+
 }

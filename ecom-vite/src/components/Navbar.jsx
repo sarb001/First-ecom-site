@@ -23,17 +23,29 @@ const Navbar = () => {
 
         <div className="n-row">
             <div className="n-col">
-                <a href = "/"> <img src = "/public/logi-img.png"   alt = "logoimg" /></a>
+                <a href = "/"> <img src = "/public/logi-img.png"   alt = "logoimg" className ='logo-img' /></a>
             </div>
             
             <div className="n-col">
                 <div className="icons">
-                    <span>  <FontAwesomeIcon icon= {faArrowRightToBracket} /> Login  </span> 
-                    <span>  <FontAwesomeIcon icon= {faHeart} /> 0 </span>
-                    <span>  <FontAwesomeIcon icon= {faShoppingBag} /> 0 </span>
+                   <a href = "/">  <span>  <FontAwesomeIcon icon= {faArrowRightToBracket} /> Login  </span> </a>  
+                   <a href = "/">  <span>   <FontAwesomeIcon icon= {faHeart} /> <span className='totalItems'> 0  </span>  </span> </a>
+                   <a href = "/">  <span>  <FontAwesomeIcon icon= {faShoppingBag} /> <span className='totalItems'> 0</span> </span> </a> 
                 </div>
              </div>
         </div>
+
+         <div className="n-row">
+            <div className="nav">
+                <ul className="items">
+                     <li className='list'> Home  </li>
+                     <li className='list'> Shop </li>
+                     <li className='list'> About  </li>
+                     <li className='list'> Contact </li>
+                </ul>
+            </div>
+         </div>
+
     </div>
   )
 }
