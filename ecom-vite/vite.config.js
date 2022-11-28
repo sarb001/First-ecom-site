@@ -6,6 +6,7 @@ export default defineConfig({
   server : {
     proxy : {
       '/api/products' : "http://localhost:5000/",
+      '/api/category' : "http://localhost:5000/",
     },
   },
   plugins: [react()]
