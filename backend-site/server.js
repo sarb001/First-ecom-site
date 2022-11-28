@@ -11,15 +11,15 @@ app.get('/api/products',(req,res) =>  {
 });
 
 // For Slider
-app.get('/api/products',(req,res) =>  {
+app.get('/api/sliders',(req,res) =>  {
     res.send(data.slideritems)
 });
 
 // For category
-app.get('/api/products',(req,res) =>  {
+app.get('/api/category',(req,res) =>  {
     res.send(data.category)
 });
 
 app.listen(PORT , () => {
-    console.log(`Connecting to port ${PORT} from here `)
+    console.log(`Connecting to port ${PORT} frddom here `)
 })
