@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import axios from 'axios';
 import { products } from '../data'
 import ProductHome from './ProductHome'
 
 import '../styles/ProductsHome.css';
 
 const ProductsHome = () => {
+
+  
+
+
   return (
     <div className = 'ps-container'> 
         {products.map((item) => (
