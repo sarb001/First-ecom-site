@@ -1,0 +1,16 @@
+.ps-card{
+    height: 50vh;
+    width: 30%;
+    background-color: rgb(238, 59, 4);
+    padding: 1%;
+    margin:2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-body  {
+  width: 100%;
+}
+.img-part {
+    width: 80%;
+    object-fit:cover
+}

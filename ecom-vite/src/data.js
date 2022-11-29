@@ -101,14 +101,7 @@ const data = {
         image :'/Amazon-Product-7.png',
         price : "50.00"
     },
-    {
-        _id : 8,
-        title : 'Product 8',
-        desc: 'Description for Product 8',
-        category : 'Men',
-        image :'/ecom-vite/public/Amazon-Product-8.png',
-        price : "67.00"
-    },
+  
     {
         _id : 9,
         title : 'Product 9',
@@ -165,7 +158,7 @@ const data = {
         image :'/Amazon-Product- 15-.png',
         price : "80.00"
     },
-]
+],
 }
 
 export default data;

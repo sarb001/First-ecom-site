@@ -4,32 +4,49 @@ import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import axios from 'axios';
-import products from '../data';
+import  products  from '../data';
 import ProductShop from './ProductShop';
-
+import '../styles/ProductsShop.css';
 
 const ProductsShop = () => {
 
  // For filter category and all Products 
- const [data,setdata] = useState(products); 
- 
+ const [dataprod,setdataprod] = useState(products); 
 
  // for Category
- const [category,setcategory] = useState([])
+ const [categories,setcategories] = useState([])
 
  // filter and all products 
-  const filterResult = (cartitem) => {
-    const result = products.filter((curdate) => {
-       return curdate.category === cartitem
+
+  // const filterResult = (cartitem) => {
+  //   const resultdata = dataprod.products?.filter( function (curdate) {
+  //      return curdate.category === cartitem;
+  //   });
+  //   console.log('Inside final state ',setdataprod(resultdata))
+  //   setdataprod(resultdata);
+  //   console.log('result is ',resultdata);
+  //   // console.log(setdata(result))
+  // }
+
+  const filterResult = (cartitem) =>  { 
+    const resultedData = dataprod.products?.filter((curdate) => {
+         return  curdate.category === cartitem;
     })
-    setdata(result);
+    console.log(resultedData);
+    console.log('dadada ',setdataprod(resultedData));
+    console.log('eee ',setdataprod({resultedData}));
+
+    setdataprod({resultedData});
   }
 
-  useEffect(() => {
 
+
+
+  // For showing all Category 
+  useEffect(() => {
     const fetchdata = async () => {
       const result = await axios.get('/api/category');
-      setcategory(result.data);
+      setcategories(result.data);
     }
     fetchdata();
   },[]);
@@ -39,16 +56,17 @@ const ProductsShop = () => {
     <div className="shop-row">
          <div className="shop-col">
            <h2> Category </h2>
-           <button className = 'shop-btn' onClick={() => setdata(products)}> All <FontAwesomeIcon icon = {faChevronRight} /> </button>
-           {category.map((item) => (
+           <button className = 'shop-btn' onClick={() => setdataprod(products)}> All <FontAwesomeIcon icon = {faChevronRight} /> </button>
+           {categories?.map((item) => (
               <button className='shop-btn' onClick={() => filterResult(item.title)}> {item.title}  <FontAwesomeIcon icon = {faChevronRight} /></button>
            ))}
          </div>
          <div className="shop-col">
             <div className="shop-products">
-                 {data.map((item) => {
-                  <ProductShop item = {item} key = {item._id} />
-                 })}
+                 { 
+                   dataprod.products?.map((items) => (
+                  <ProductShop items = {items} key = {items._id} />
+                 ))}
             </div>
             <div className="shop-pagination">
                  Pagination 
