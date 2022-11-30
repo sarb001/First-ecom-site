@@ -1,6 +1,8 @@
 import React, {useReducer , useEffect} from 'react'
 import { useParams} from 'react-router-dom';
 import axios from 'axios';
+import Productscreencard from './Productscreencard';
+import Navbar from '../components/Navbar';
 
 const reducer = (state,action) => {
   switch(action.type){
@@ -40,10 +42,13 @@ const Productscreen = () => {
     fetchdata()
   },[slug])
 
-  return loading ? (<h1 className='loading'> Loading.... </h1>) :  error ? (
-    <h1 className='error'> {error} </h1>) : (<p> {product.title}  </p>)
-
-
+  return loading ? (<h1 className = 'loading'> Loading.... </h1>) :  error ? (
+    <h1 className='error'> {error} </h1>) : (
+      <>
+      <Navbar />
+      <Productscreencard product = {product} /> 
+      </> 
+    )
 }
 
 
