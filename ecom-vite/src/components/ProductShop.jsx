@@ -1,7 +1,7 @@
 import { faHeart, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/ProductShop.css';
 
 const ProductShop = ({items}) => {
@@ -9,8 +9,9 @@ const ProductShop = ({items}) => {
   return (
     <div className='ps-card'>
         <div className="card-header" style = {{width:'40%'}}>
-          {/* <img src = "/public/Amazon-Product- 14-.png"  className = 'img-part' /> */}
-        <img src = {items.image}  alt = {items.title}  className = 'img-part' />
+          <Link to = {`/product/${items._id}`}>
+             <img src = {items.image}  alt = {items.title}  className = 'img-part' />
+          </Link>
          </div> 
         <div className="card-body">
            <span> Amazon Product Shirt  </span>

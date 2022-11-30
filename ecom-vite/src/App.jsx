@@ -8,6 +8,7 @@ import  Contact  from './pages/Contact';
 import Wish from './pages/wish';
 import Login from './pages/Login';
 import Cart from './pages/cart';
+import Productscreen from './pages/Productscreen';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <div className="App">
           <Routes> 
             <Route path = "/" element = {<Home />}> </Route>
+            <Route path = "/product/:_id" element = {<Productscreen />}> </Route>
             <Route path = "/shop" element = {<Shop />}> </Route>
             <Route path = "/about" element = {<About />}> </Route>
             <Route path = "/contact" element = {<Contact />}> </Route>

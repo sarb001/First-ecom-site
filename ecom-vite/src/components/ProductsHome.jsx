@@ -46,9 +46,13 @@ const ProductsHome = () => {
     
   return (
     <div className = 'ps-container'> 
-        {products.map((item) => (
-            <ProductHome item = {item} key = {item._id} />
-        ))}
+    
+        { 
+          loading ? (<h1 className = 'loading'> Loading.... </h1>) : error ? (<h1>{error}</h1>) : (
+          products.map((item) => (
+              <ProductHome item = {item} key = {item._id} />
+          )))
+        }
     </div>
   )
 }

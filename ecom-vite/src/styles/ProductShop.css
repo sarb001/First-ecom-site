@@ -6,6 +6,7 @@
     margin:2%;
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 .card-body  {
   width: 100%;
