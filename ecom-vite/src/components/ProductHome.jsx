@@ -1,7 +1,7 @@
 import { faEye, faHeart, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom';
 import '../styles/ProductHome.css';
 import Quick from './Quick';
 
@@ -12,8 +12,10 @@ const ProductHome = ({item}) => {
   return (
     <div className = 'hp-card'>
          <div className = "card-header">
-              <img src = {item.image} alt = {item.title} className = "product-img"/>
-         </div>
+            <Link to = {`/product/${item._id}`}>
+                <img src = {item.image}  alt = {item.title}  className = 'img-part' />
+              </Link>       
+          </div>
          <div className = "card-body">
              <h3 className='title'> {item.title} </h3> 
              <span> ${item.price} </span>
