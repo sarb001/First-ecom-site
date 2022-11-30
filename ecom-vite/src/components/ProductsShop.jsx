@@ -28,18 +28,16 @@ const ProductsShop = () => {
   //   // console.log(setdata(result))
   // }
 
-  const filterResult = (cartitem) =>  { 
-    const resultedData = dataprod.products?.filter((curdate) => {
-         return  curdate.category === cartitem;
-    })
-    console.log(resultedData);
-    console.log('dadada ',setdataprod(resultedData));
-    console.log('eee ',setdataprod({resultedData}));
+  // const filterResult = (cartitem) =>  { 
+  //   const resultedData = dataprod.products?.filter((curdate) => {
+  //        return  curdate.category === cartitem;
+  //   })
+  //   console.log(resultedData);
+  //   console.log('dadada ',setdataprod(resultedData));
+  //   console.log('eee ',setdataprod({resultedData}));
 
-    setdataprod({resultedData});
-  }
-
-
+  //   setdataprod({resultedData});
+  // }
 
 
   // For showing all Category 
@@ -50,6 +48,7 @@ const ProductsShop = () => {
     }
     fetchdata();
   },[]);
+
 
   return (
     <div className='shop-container'> 
