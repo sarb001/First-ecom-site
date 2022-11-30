@@ -6,6 +6,10 @@ const Productscreen = () => {
     const params = useParams();
     const {_id} =  params;
 
+    
+
+
+
   return (
     <div>
         Productscreen  {_id}
