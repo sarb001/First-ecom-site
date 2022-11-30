@@ -12,7 +12,7 @@ const ProductHome = ({item}) => {
   return (
     <div className = 'hp-card'>
          <div className = "card-header">
-            <Link to = {`/product/${item._id}`}>
+            <Link to = {`/product/${item.slug}`}>
                 <img src = {item.image}  alt = {item.title}  className = 'img-part' />
               </Link>       
           </div>

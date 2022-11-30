@@ -55,7 +55,7 @@ const ProductsShop = () => {
     <div className="shop-row">
          <div className="shop-col">
            <h2> Category </h2>
-           <button className = 'shop-btn' onClick={() => setdataprod(products)}> All <FontAwesomeIcon icon = {faChevronRight} /> </button>
+           <button className = 'shop-btn'  onClick={() => setdataprod(products)}> All <FontAwesomeIcon icon = {faChevronRight} /> </button>
            {categories?.map((item) => (
               <button className='shop-btn' onClick={() => filterResult(item.title)}> {item.title}  <FontAwesomeIcon icon = {faChevronRight} /></button>
            ))}

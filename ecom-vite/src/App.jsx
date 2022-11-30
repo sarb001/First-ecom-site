@@ -16,14 +16,14 @@ function App() {
     <Router>
         <div className="App">
           <Routes> 
-            <Route path = "/" element = {<Home />}> </Route>
-            <Route path = "/product/:_id" element = {<Productscreen />}> </Route>
-            <Route path = "/shop" element = {<Shop />}> </Route>
-            <Route path = "/about" element = {<About />}> </Route>
+            <Route path = "/"        element = {<Home />}> </Route>
+            <Route path = "/product/:slug" element = {<Productscreen />}> </Route>
+            <Route path = "/shop"   element = {<Shop />}> </Route>
+            <Route path = "/about"  element = {<About />}> </Route>
             <Route path = "/contact" element = {<Contact />}> </Route>
-            <Route path = "/cart" element = {<Cart />}> </Route>
-            <Route path = "/login" element = {<Login />}> </Route>
-            <Route path = "/wish" element = {<Wish />}> </Route>
+            <Route path = "/cart"   element = {<Cart />}> </Route>
+            <Route path = "/login"  element = {<Login />}> </Route>
+            <Route path = "/wish"   element = {<Wish />}> </Route>
           </Routes>
           </div>
     </Router>
