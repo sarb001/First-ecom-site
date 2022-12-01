@@ -44,7 +44,7 @@
             image1: '/Amazon-Product-11.png',
             image2: '/Amazon-Product-12.png',
             image3: '/Amazon-Product-13.png',
-            price : "80.00",
+            price : "80",
         },
         {
             _id : 2,
@@ -56,7 +56,7 @@
             image1: '/Amazon-Product-41.png',
             image2: '/Amazon-Product-42.png',
             image3: '/Amazon-Product-43.png',
-            price : "65.00"
+            price : "65"
         },
         {
             _id : 3,
@@ -67,8 +67,8 @@
             image :'/Amazon-Product-5.png',
             image1: '/Amazon-Product-51.png',
             image2: '/Amazon-Product-52.png',
-            image3: '/Amazon-Product-53.png',
-            price : "45.00"
+            image3: '/Amazon-Product-53.png',  
+            price : "45"
         },
         {
             _id : 4,
@@ -80,7 +80,7 @@
             image1: '/Amazon-Product-61.png',
             image2: '/Amazon-Product-62.png',
             image3: '/Amazon-Product-63.png',
-            price : "160.00"
+            price : "160"
         },
     ]
 }

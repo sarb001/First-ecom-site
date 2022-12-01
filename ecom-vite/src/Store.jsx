@@ -4,7 +4,9 @@ export const Store = createContext();
 
 const initialState = {
     cart : {
-        cartitems : [],     // empty cart by default
+        cartitems : localStorage.getItem('cartitems') ? JSON.parse(localStorage.getItem('cartitems')) : [],
+    //  cartitems : [],     
+     // empty cart by default
     },
     wish : {
         wishitems : [],         // empty wish  by default  
@@ -21,6 +23,7 @@ const initialState = {
              const newitem = action.payload;
              const existitem = state.cart.cartitems.find((item) => item._id === newitem._id);
              const cartitems = existitem ?  state.cart.cartitems.map((item) => item._id === existitem._id ? newitem : item) : [...state.cart.cartitems , newitem];
+             localStorage.setItem('cartitems', JSON.stringify(cartitems));
 
              return {...state ,cart :  {...state.cart , cartitems}};
 
@@ -28,8 +31,15 @@ const initialState = {
 
              // add to Wish 
           case 'WISH_ADD_ITEM':
-             return {...state ,wish :  {...state.wish , wishitems : [...state.wish.wishitems, action.payload]}}
+             return {...state , wish :  {...state.wish , wishitems : [...state.wish.wishitems, action.payload]}}
 
+             case 'CART_REMOVE_ITEM':{
+                const cartitems = state.cart.cartitems.filter((item) => item._id !== action.payload._id);
+                localStorage.setItem('cartitems', JSON.stringify(cartitems));
+                
+                return {...state , cart :  {...state.cart , cartitems }}
+             }
+   
         default : 
          return state;
     }   
