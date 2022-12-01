@@ -35,7 +35,7 @@ const Navbar = () => {
             </div>
             
             <div className="n-col">
-                <div className="icons">
+                <div className = "icons">
                    <a href = "/login">  <span>  <FontAwesomeIcon icon= {faArrowRightToBracket} /> Login  </span> </a>  
                    <a href = "/wish">  <span>   <FontAwesomeIcon icon = {faHeart} />     { wish.wishitems.length > 0 && ( 
                    <span className = 'totalItems'>  { wish.wishitems.length } </span> )}  </span> </a>

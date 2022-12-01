@@ -5,6 +5,8 @@
 }
 .icons >a {
     text-decoration: none;
+    width: 50%;
+    background-color: aqua;
 }
 .socials > a{
     text-decoration: none;
@@ -29,4 +31,10 @@ ul > li {
 }
 .list a.active {
   color: rgb(204, 0, 255);
+}
+.icons {
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
 }

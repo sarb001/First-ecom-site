@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import Navbar from '../components/Navbar';
 import { Store } from '../Store';
+import { Link } from 'react-router-dom';
+
+
 
 const Wish = () => {
 

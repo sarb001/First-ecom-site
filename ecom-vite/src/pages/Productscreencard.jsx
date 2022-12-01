@@ -1,9 +1,12 @@
 import React , {useContext, useState} from 'react'
 import '../styles/Productscreencard.css';
 import { Store } from '../Store';
+import { useNavigate } from 'react-router';
 
 const Productscreencard = ({product}) => 
 {
+    const navigate = useNavigate();
+
     const [selectedimage,setselectedimage] = useState('');      // default is Empty 
 
     const {state,dispatch : ctxdispatch} = useContext(Store);
@@ -13,6 +16,8 @@ const Productscreencard = ({product}) =>
             type : 'CART_ADD_ITEM',
             payload : {...product , quantity : 1},
         });
+
+        navigate('/cart');
     };
 
     const addtowishhandler = () => {
