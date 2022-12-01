@@ -49,10 +49,10 @@ const Navbar = () => {
          <div className="n-row">
             <div className="nav">
                 <ul className="items">
-                     <li className='list'> <NavLink to = "/"         activeclassName = "active">  Home </NavLink>   </li>
-                     <li className='list'> <NavLink to = "/shop"     activeclassName = "active"> Shop </NavLink>    </li>
-                     <li className='list'> <NavLink to = "/about"    activeclassName = "active"> About  </NavLink>   </li>
-                     <li className='list'> <NavLink to = "/contact"  activeclassName = "active"> Contact </NavLink> </li>
+                     <li className='list'> <NavLink to = "/"         activeclassname = "active">  Home </NavLink>   </li>
+                     <li className='list'> <NavLink to = "/shop"     activeclassname = "active"> Shop </NavLink>    </li>
+                     <li className='list'> <NavLink to = "/about"    activeclassname = "active"> About  </NavLink>   </li>
+                     <li className='list'> <NavLink to = "/contact"  activeclassname = "active"> Contact </NavLink> </li>
                 </ul>
             </div>
          </div>

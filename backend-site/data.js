@@ -34,7 +34,7 @@ const data = {
     
     products : [
         {
-            _id : 1,
+            // _id : 1,
             title : 'Product 1',
             slug : 'product1',
             countinstock : 12,
@@ -47,7 +47,7 @@ const data = {
             price : "80.00",
         },
         {
-            _id : 2,
+            // _id : 2,
             title : 'Product 2',
             slug : 'product2',   
             countinstock : 6,
@@ -60,7 +60,7 @@ const data = {
             price : "65.00"
         },
         {
-            _id : 3,
+            // _id : 3,
             title : 'Product 3',
             slug : 'product3',
             countinstock : 9,
@@ -73,7 +73,7 @@ const data = {
             price : "45.00"
         },
         {
-            _id : 4,
+            // _id : 4,
             title : 'Product 4',
             slug : 'product4',
             countinstock : 7,

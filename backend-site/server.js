@@ -3,6 +3,8 @@ import express  from 'express';
 import mongoose from 'mongoose';
 import data from './data.js';
 import dotenv from 'dotenv';
+import seedRouter from './routes/seedroutes.js';
+import productRouter from  './routes/productroutes.js';
 
 dotenv.config();
 mongoose.connect(process.env.MONGODB_URI).then(() => {
@@ -14,6 +16,10 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 const app = express();
 const PORT  = process.env.PORT  || 5000
 
+// For seed or db storing or  accesing 
+app.use('/api/seed/' , seedRouter)
+
+app.use('/api/products/' , productRouter)
 
 
 // For Products 
@@ -31,15 +37,16 @@ app.get('/api/category',(req,res) =>  {
     res.send(data.category)
 });
 
-// for Product 
-app.get('/api/products/slug/:slug', (req,res) =>  {
-    const product = data.products.find((x)=> x.slug === req.params.slug);
-    if(product){
-        res.send(product)
-    }else {
-        res.status(404).send({message : ' Product not Found '})
-    }   
-});
+
+// // for Product 
+// app.get('/api/products/slug/:slug', (req,res) =>  {
+//     const product = data.products.find((x)=> x.slug === req.params.slug);
+//     if(product){
+//         res.send(product)
+//     }else {
+//         res.status(404).send({message : ' Product not Found '})
+//     }   
+// });
 
 
 

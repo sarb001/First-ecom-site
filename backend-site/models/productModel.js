@@ -2,20 +2,20 @@
 import mongoose from "mongoose";
 
 //Create table into DB
+// Schema or Structure of data stored in Db
+
 const productSchema = new mongoose.Schema(
     {
-      name : { type : String , required : true , unique : true},
-      slug: { type: String, required: true, unique: true },
-      image: { type: String, required: true },
-      images: {String},
-      brand : {type  : String ,required : true},
-      category: { type: String, required: true },
-      description : { type: String, required: true },
-      price : { type: Number, required: true },
-      countInStock: { type: Number, required: true },
-      rating : { type : Number , required : true},
-      numofReviews : { type : Number , required : true},
-      reviews : {reviewSchema},
+        title: { type: String, required: true, unique: true },
+        slug: { type: String, required: true, unique: true },
+        desc: { type: String, required: true },
+        category: { type: String, required: true },
+        image: { type: String, required: true },
+        image1: { type: String, required: true },
+        image2: { type: String, required: true },
+        image3: { type: String, required: true },
+        countinstock: { type: Number, required: true },
+        price: { type: Number, required: true },
     },
     {
       timestamps: true, //add date
