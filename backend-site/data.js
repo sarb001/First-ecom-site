@@ -16,17 +16,17 @@ const data = {
     ],
     category : [
         {
-            _id : 1 ,
+            // _id : 1 ,
             title : 'Men',
             image : '/public/Men1.jpg'
         }, 
         {
-            _id : 2 ,
+            // _id : 2 ,
             title : 'Women',
             image : '/public/women2.jpg'
         },
         {
-            _id : 3 ,
+            // _id : 3 ,
             title : 'kids',
             image : '/public/kids3.jpg'
         }
@@ -78,6 +78,19 @@ const data = {
             slug : 'product4',
             countinstock : 7,
             desc: 'Description for Product 4',
+            category : 'Men',
+            image :'/Amazon-Product-3.png',
+            image1: '/Amazon-Product-31.png',
+            image2: '/Amazon-Product-32.png',
+            image3: '/Amazon-Product-33.png',
+            price : "160.00"
+        },
+        {
+            // _id : 5,
+            title : 'Product 5',
+            slug : 'product5',
+            countinstock : 45,
+            desc: 'Description for Product 5',
             category : 'Men',
             image :'/Amazon-Product-6.png',
             image1: '/Amazon-Product-61.png',

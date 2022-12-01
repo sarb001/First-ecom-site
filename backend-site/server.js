@@ -5,6 +5,7 @@ import data from './data.js';
 import dotenv from 'dotenv';
 import seedRouter from './routes/seedroutes.js';
 import productRouter from  './routes/productroutes.js';
+import categoryRouter from './routes/categoryroute.js';
 
 dotenv.config();
 mongoose.connect(process.env.MONGODB_URI).then(() => {
@@ -16,10 +17,11 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 const app = express();
 const PORT  = process.env.PORT  || 5000
 
-// For seed or db storing or  accesing 
+// For seed or db storing or  accesing
+// Location of Seed File  
 app.use('/api/seed/' , seedRouter)
-
-app.use('/api/products/' , productRouter)
+app.use('/api/products/' , productRouter)           // For All Products 
+app.use('/api/category/' , categoryRouter)          // For CATEGORY-WISE 
 
 
 // For Products 
