@@ -1,9 +1,26 @@
-import React , {useState} from 'react'
+import React , {useContext, useState} from 'react'
 import '../styles/Productscreencard.css';
+import { Store } from '../Store';
 
 const Productscreencard = ({product}) => 
 {
     const [selectedimage,setselectedimage] = useState('');      // default is Empty 
+
+    const {state,dispatch : ctxdispatch} = useContext(Store);
+
+    const addtocarthandler = () => {
+        ctxdispatch({
+            type : 'CART_ADD_ITEM',
+            payload : {...product , quantity : 1},
+        });
+    };
+
+    const addtowishhandler = () => {
+        ctxdispatch({
+            type : 'WISH_ADD_ITEM',
+            payload : {...product , quantity : 1},
+        });
+    };
 
   return (
     <div className='screen-container'> 
@@ -36,8 +53,8 @@ const Productscreencard = ({product}) =>
                             <p className='desc'>  {product.desc} </p>
                         </div>
                         <div className="fourth-div div">
-                            <button className='cart'> Add to Cart  </button>
-                            <button className='wish'> Add to Wish  </button>
+                            <button className='cart' onClick={addtocarthandler}> Add to Cart  </button>
+                            <button className='wish' onClick={addtowishhandler}> Add to Wish  </button>
                          </div>
                     </div>
             </div>

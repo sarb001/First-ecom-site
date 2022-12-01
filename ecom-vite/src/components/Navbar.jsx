@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faShoppingBag ,faHeart , faArrowRightToBracket} from '@fortawesome/free-solid-svg-icons'
 
 import {NavLink} from 'react-router-dom';
 
 import '../styles/Navbar.css';
+import { Store } from '../Store';
+
 
 const Navbar = () => {
+
+    const {state} = useContext(Store);
+    const {cart , wish} = state;
+
   return (
     <div className='n-container'>
         <div className="n-row">
@@ -31,8 +37,11 @@ const Navbar = () => {
             <div className="n-col">
                 <div className="icons">
                    <a href = "/login">  <span>  <FontAwesomeIcon icon= {faArrowRightToBracket} /> Login  </span> </a>  
-                   <a href = "/wish">  <span>   <FontAwesomeIcon icon= {faHeart} /> <span className='totalItems'> 0  </span>  </span> </a>
-                   <a href = "/cart">  <span>  <FontAwesomeIcon icon= {faShoppingBag} /> <span className='totalItems'> 0</span> </span> </a> 
+                   <a href = "/wish">  <span>   <FontAwesomeIcon icon = {faHeart} />     { wish.wishitems.length > 0 && ( 
+                   <span className = 'totalItems'>  { wish.wishitems.length } </span> )}  </span> </a>
+                   <a href = "/cart">  <span>  <FontAwesomeIcon icon = {faShoppingBag} /> { cart.cartitems.length > 0 && (
+                    <span className = 'totalItems'> { cart.cartitems.length} </span> )}  </span> </a> 
+                 
                 </div>
              </div>
         </div>

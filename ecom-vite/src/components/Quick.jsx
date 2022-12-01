@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
+import { Store } from '../Store';
 import '../styles/Quick.css'
 
 // this Page to Show on clicking Item 
@@ -17,6 +18,22 @@ const Quick = ({item}) => {
     const changestyle = () => 
     {
         setstyle('main-containerOne');
+    };
+
+    const {state,dispatch : ctxdispatch} = useContext(Store);
+
+    const addtocarthandler = () => {
+        ctxdispatch({
+            type : 'CART_ADD_ITEM',
+            payload : {...item , quantity : 1},
+        });
+    };
+
+    const addtowishhandler = () => {
+        ctxdispatch({
+            type : 'WISH_ADD_ITEM',
+            payload : {...item , quantity : 1},
+        });
     };
 
   return (
@@ -49,8 +66,8 @@ const Quick = ({item}) => {
                             <p className='desc'>  {item.desc} </p>
                         </div>
                         <div className="fourth-div div">
-                            <button className='cart'> Add to Cart  </button>
-                            <button className='wish'> Add to Wish  </button>
+                            <button className='cart' onClick={addtocarthandler}> Add to Cart  </button>
+                            <button className='wish' onClick={addtowishhandler}> Add to Wish  </button>
                          </div>
                     </div>
             </div>
