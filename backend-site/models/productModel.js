@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema(
     {
-        title: { type: String, required: true, unique: true },
+        title: { type: String, required: true, unique: true , index:true ,sparse : true },
         slug: { type: String, required: true, unique: true },
         desc: { type: String, required: true },
         category: { type: String, required: true },

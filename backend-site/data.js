@@ -1,5 +1,20 @@
+import bcrypt from 'bcryptjs';
 
 const data = {
+     users : [
+        {
+            name : 'Milan',
+            email : 'admian@gmail.com',
+            password : bcrypt.hashSync('admin'),
+            isAdmin : true
+        },
+        {
+            name : 'Reciepe',
+            email : 'ricepwebg@gmail.com',
+            password : bcrypt.hashSync('reciepe'),
+            isAdmin : false
+        }
+     ],
     slideritems : [
         {
             _id : 1 ,
