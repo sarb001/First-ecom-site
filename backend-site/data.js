@@ -13,6 +13,12 @@ const data = {
             email : 'ricepwebg@gmail.com',
             password : bcrypt.hashSync('reciepe'),
             isAdmin : false
+        }, 
+        {
+            name : 'sarb',
+            email : 'mrsinghbusiness05@gmail.com',
+            password : bcrypt.hashSync('singh'),
+            isAdmin : false
         }
      ],
     slideritems : [
